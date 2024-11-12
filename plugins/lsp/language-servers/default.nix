@@ -181,7 +181,7 @@ let
 
   generatedServers = lib.pipe ../../../generated/lspconfig-servers.json [
     lib.importJSON
-    (lib.map (
+    (map (
       {
         name,
         desc ? "${name} language server",
